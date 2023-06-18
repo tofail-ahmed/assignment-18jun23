@@ -1,0 +1,109 @@
+.header {
+      background-color: yellow;
+      width: 100vw;
+      height: 500px;
+      position: relative;
+      z-index: 100;
+
+}
+
+.header::after {
+      background-color: yellow;
+      content: "";
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 200px;
+      border-bottom: 1px solid black;
+      border-bottom-left-radius: 50% 70px;
+      border-bottom-right-radius: 50% 70px;
+      transform-origin: center bottom;
+      clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+      z-index: 100;
+
+}
+
+.text {
+      position: relative;
+      left: 40vw;
+      top: 20vh;
+      width: 250px;
+
+}
+
+.circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgb(237, 180, 180);
+      position: relative;
+      left: 45vw;
+      top: 40%;
+
+}
+
+.circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgb(237, 180, 180);
+      position: relative;
+      left: 45vw;
+      top: 40%;
+}
+
+.circle:hover {
+      animation: spin 1s 1 linear,
+            pulse 1.5s infinite;
+      transform: rotate(90deg) scale(1.2);
+}
+
+@keyframes spin {
+      0% {
+            transform: rotate(0);
+      }
+
+      100% {
+            transform: rotate(90deg);
+      }
+}
+
+@keyframes pulse {
+      0% {
+            box-shadow: 0 0 0 0 rgba(237, 180, 180, 0.5);
+      }
+
+      50% {
+            box-shadow: 0 0 0 20px rgba(237, 180, 180, 0);
+      }
+
+      100% {
+            box-shadow: 0 0 0 0 rgba(237, 180, 180, 0.5);
+      }
+}
+
+
+
+
+.smile {
+      font-size: 60px;
+      position: absolute;
+      left: 33px;
+      top: -35px;
+
+
+}
+
+
+.footer {
+      background-color: rgb(134, 134, 237);
+      width: 100vw;
+      height: 200px;
+      position: absolute;
+      top: 500px;
+
+
+      z-index: 10;
+}
